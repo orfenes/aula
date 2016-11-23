@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Andresses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Street</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Contact</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @andresses.each do |andress| %>
+      <tr>
+        <td><%= andress.street %></td>
+        <td><%= andress.city %></td>
+        <td><%= andress.state %></td>
+        <td><%= andress.contact %></td>
+        <td><%= link_to 'Show', andress %></td>
+        <td><%= link_to 'Edit', edit_andress_path(andress) %></td>
+        <td><%= link_to 'Destroy', andress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Andress', new_andress_path %>
