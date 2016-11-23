@@ -1,4 +1,4 @@
-class CreateKinds < ActiveRecord::Migration
+-class CreateKinds < ActiveRecord::Migration
   def change
     create_table :kinds do |t|
       t.string :description
