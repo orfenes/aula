@@ -5,7 +5,8 @@ module ApplicationHelper
     ["São Paulo", "SP"],
     ["Rio de Janeiro", "RJ"],
     ["Minas Gerais", "MG"],
-    ["Espirito Santo", "ES"]
+    ["Espirito Santo", "ES"],
+    ["Rio Grade do Sul", "RS"]
   ]
 
   def options_for_states(selected)
