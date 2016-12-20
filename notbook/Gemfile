@@ -38,6 +38,8 @@ group :development, :test do
   gem 'byebug'
   # faker de gens
   gem 'faker'
+  # generator
+  gem 'lerolero_generator'
 end
 
 group :development do
