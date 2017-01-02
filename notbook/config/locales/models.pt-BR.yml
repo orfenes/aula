@@ -7,15 +7,21 @@
       andress:
         one: Endereço
         other: Endereços
+      phones:
+        one: Telefone
+        other: Telefones
     attributes:
       contact:
-        name: "Nome"
-        email: "E-mail"
-        kind_id: "Tipo de contato"
-        rmk: "Obs"
+        name: Nome
+        email: E-mail
+        kind_id: Tipo de contato
+        rmk: Obs
       andress:
-        street: "Rua"
-        city: "Cidade"
-        state: "Estado"
-        contact_id: "Contato"
-        rmk: "Obs"
+        street: Rua
+        city: Cidade
+        state: Estado
+        contact_id: Contato
+        rmk: Obs
+      phone:
+        phone: Telefone
+

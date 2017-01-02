@@ -1,4 +1,10 @@
 /* #### Dark Matter #### */
+
+
+a{
+    color: #888
+}
+
 .dark-matter {
     margin-left: auto;
     margin-right: auto;
@@ -88,4 +94,8 @@
 .dark-matter .button:hover {
     color: #333;
     background-color: #EBEBEB;
+}
+
+.dark-matter input[type="text"].phone-field{
+    width: 70%;
 }
