@@ -4,7 +4,7 @@ namespace :utils do
 
     puts "---------------------------------------"
     puts "Gerando os contato....(Contacts)"
-    10.times do |i|
+    100.times do |i|
       Contact.create!(
         name: Faker::Name.name,
         email: Faker::Internet.email,
