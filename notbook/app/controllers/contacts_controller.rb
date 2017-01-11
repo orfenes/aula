@@ -1,5 +1,8 @@
 class ContactsController < ApplicationController
+
+  # set_contact ocorre antes de qualquer ação [:show, :edit, :update, :destroy]
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
+  before_action :set_options_for_select, only: [:new, :edit, :update, :create]
 
   # GET /contacts
   # GET /contacts.json
@@ -16,12 +19,10 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new
     @contact.build_andress
-    options_for_select
   end
 
   # GET /contacts/1/edit
   def edit
-    options_for_select
   end
 
   # POST /contacts
@@ -66,7 +67,7 @@ class ContactsController < ApplicationController
 
   private
 
-  def options_for_select
+  def set_options_for_select
     @kind_options_for_select = Kind.all
   end
 
