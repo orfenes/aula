@@ -6,6 +6,9 @@ gem 'bundler', '>= 1.8.4'
 # lib javascript notificação
 gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 
+#lib bootstrap
+gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 
