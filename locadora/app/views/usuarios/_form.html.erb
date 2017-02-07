@@ -1,0 +1,23 @@
+<%= form_for(@usuario) do |f| %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cpf %><br>
+    <%= f.text_field :cpf %>
+  </div>
+
+  <div class="actvion">
+    <%= f.submit("Enviar", class:"button") %>
+    <%= link_to 'Voltar', usuarios_path, class: "button" %>
+  </div>
+
+<% end %>

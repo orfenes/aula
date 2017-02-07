@@ -1,0 +1,30 @@
+<div class="wrapper">
+
+  <h1>Pagina de usuarios</h1>
+
+  <p><%= notice %></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+  </table>
+
+  <tbody>
+    <% @usuarios.each do |usuario| %>
+      <tr>
+        <td><%= usuario.nome %></td>
+        <td><%= usuario.cpf %></td>
+        <td><%= usuario.email %></td>
+        <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
+      </tr>
+    <% end  %>
+  </tbody>
+
+</div>
+
+<%= link_to 'Novo', new_usuario_path %>
