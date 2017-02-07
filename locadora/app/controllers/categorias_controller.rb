@@ -4,7 +4,6 @@ class CategoriasController < ApplicationController
   end
 
   def show
-    @categoria.find(param[:id])
   end
 
   def new
@@ -13,41 +12,27 @@ class CategoriasController < ApplicationController
 
   def create
     @categoria = Categorium.new(categoria_params)
-    responde_to do |format|
-      if @categoria.save
-        format.html { redirect_to @categoria, notice: 'Categoria salva com sucesso' }
+    respond_to do |format|
+      if @categoria
+        format.html { redirect_to @categoria, notice: 'deu certo' }
       else
-        format.html { render :new }
+        format.html { redirect_to :new}
       end
     end
   end
 
 
   def edit
-    @categoria = Categorium.find(params[:id])
   end
 
   def update
-    @categoria = Categorium.find(:id)
-    responde_to do |format|
-      if @categoria.update(categoria_params)
-        format.html { redirect_to @categoria, notice: 'Atualizada categoria com sucesso' }
-      else
-        format.html { render :edit }
-      end
-    end
   end
 
   def destroy
-    @categoria = Categorium.find(:id)
-    @categoria.destroy
-    responde_to do |format|
-      format.html { redirect_to @categoria, notice: 'Usuario deletado com sucesso' }
-    end
   end
 
   def categoria_params
-   params.require(:categoria).permit(:nome)
+   params.require(:categorium).permit(:nome)
   end
 
 end
