@@ -1,0 +1,12 @@
+<%= form_for(@generos) do |f| %>
+<div class="field">
+  <%= f.label :nome %>
+  <%= f.text_field :nome %>
+</div>
+
+  <div class="actvion">
+    <%= f.submit("Enviar", class:"button") %>
+    <%= link_to 'Voltar', generos_path, class: "button" %>
+  </div>
+
+<% end %>

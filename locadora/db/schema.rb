@@ -10,18 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170207215635) do
-
-  create_table "categorias", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "nome"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20170208110751) do
 
   create_table "filmes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "nome"
     t.string   "ano"
     t.string   "categoria"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "generos_id"
+    t.boolean  "disponivel"
+    t.index ["generos_id"], name: "index_filmes_on_generos_id", using: :btree
+  end
+
+  create_table "generos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,4 +37,5 @@ ActiveRecord::Schema.define(version: 20170207215635) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "filmes", "generos", column: "generos_id"
 end

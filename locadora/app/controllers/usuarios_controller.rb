@@ -47,7 +47,7 @@ class UsuariosController < ApplicationController
   end
 
   def usuario_params
-    params.require(:usuario).permit(:nome, :email, :cpf)
+    params.require(:usuario).permit(:name, :email, :cpf)
   end
 
 end
