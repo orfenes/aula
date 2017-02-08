@@ -12,19 +12,20 @@
         <th>Email</th>
       </tr>
     </thead>
+
+    <tbody>
+      <% @usuarios.each do |usuario| %>
+        <tr>
+          <td><%= usuario.name %></td>
+          <td><%= usuario.cpf %></td>
+          <td><%= usuario.email %></td>
+          <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
+          <td><%= link_to 'Excluir', usuario, method: :delete %></td>
+        </tr>
+      <% end %>
+    </tbody>
+
   </table>
-
-  <tbody>
-    <% @usuarios.each do |usuario| %>
-      <tr>
-        <td><%= usuario.name %></td>
-        <td><%= usuario.cpf %></td>
-        <td><%= usuario.email %></td>
-        <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
-      </tr>
-    <% end  %>
-  </tbody>
-
 </div>
 
 <%= link_to 'Novo', new_usuario_path %>

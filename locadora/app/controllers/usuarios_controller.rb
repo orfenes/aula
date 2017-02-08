@@ -42,7 +42,7 @@ class UsuariosController < ApplicationController
     @usuario = Usuario.find(params[:id])
     @usuario.destroy
     respond_to do |format|
-      format.html { redirect_to @usuario, notice: 'Usuario deletado com sucesso' }
+      format.html { redirect_to usuarios_url, notice: 'Usuario deletado com sucesso' }
     end
   end
 
