@@ -15,8 +15,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :genero_id %>
-    <%#= f.collection_select(:genero_id, @genero_options, :id, :nome) %>
+    <%= f.label :generos_id %>
+    <%= f.collection_select(:generos_id, @genero_options, :id, :nome) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit("Enviar", class: "button") %>
+    <%= link_to 'Voltar', filmes_path, class: "button" %>
   </div>
 
 <% end %>
