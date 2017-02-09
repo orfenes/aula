@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente_id: 
+  dvd_id: 
+  data_retirada: 2017-02-09 15:59:56
+  date_devolucao: 
+  observacoes: MyString
+
+two:
+  cliente_id: 
+  dvd_id: 
+  data_retirada: 2017-02-09 15:59:56
+  date_devolucao: 
+  observacoes: MyString

@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <caption>Lista de categorias</caption>
+        <thead>
+          <tr>
+            <th>Nome da categoria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @categorias.each do |categoria| %>
+            <tr>
+              <td><%= categoria.nome %></td>
+              <td><%= link_to 'Editar', edit_categoria_path(categoria) %></td>
+              <td><%= link_to 'Excluir', categoria, method: :delete, data: { confirm: 'messages.confirm' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+
+  <%= link_to 'Novo', new_categoria_path, class: "btn btn-primary" %>
+  <%= link_to 'Home', root_path, class: "btn btn-danger" %>
+</div>
